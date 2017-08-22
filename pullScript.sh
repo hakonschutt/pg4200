@@ -16,5 +16,6 @@ git checkout mergebranch
 git merge master
 git add --all
 git commit -m "automatet merge with master after pull"
+git push --all
 echo "everything seems to be working fine"
 
