@@ -11,16 +11,15 @@ public class DrawRedBlackTreeMap<K extends Comparable<K>, V> extends RedBlackTre
                          [0]
                         /  \
                       /     \
-                    (1)     (2)
+                    [1]     [2]
                    /  \    /  \
                  [3]  [4][5]  [6]
      */
 
 
     /**
-     * Strong assumption: only going to insert/remove key integers from 0 to 6.
-     * This means each key is at most 1 character, and tree has at most a depth
-     * of 3.
+     * Strong assumption: only going to insert/remove keys with toString() of 1 in length,
+     * and tree depth of max 3.
      */
     public void draw() {
 
@@ -144,22 +143,8 @@ public class DrawRedBlackTreeMap<K extends Comparable<K>, V> extends RedBlackTre
 
     public static void main(String[] args){
 
-        //TODO sequence of operations on RBT
-
         DrawRedBlackTreeMap<Integer,String>  tree = new DrawRedBlackTreeMap<>();
 
-        tree.draw();
-        System.out.print("\n\n\n");
-
-        tree.put(2,"a");
-        tree.draw();
-        System.out.print("\n\n\n");
-
-        tree.put(1,"a");
-        tree.draw();
-        System.out.print("\n\n\n");
-
-        tree.put(0,"a");
         tree.draw();
         System.out.print("\n\n\n");
 
@@ -167,11 +152,7 @@ public class DrawRedBlackTreeMap<K extends Comparable<K>, V> extends RedBlackTre
         tree.draw();
         System.out.print("\n\n\n");
 
-        tree.put(4,"a");
-        tree.draw();
-        System.out.print("\n\n\n");
-
-        tree.put(5,"a");
+        tree.put(2,"a");
         tree.draw();
         System.out.print("\n\n\n");
 
@@ -179,9 +160,14 @@ public class DrawRedBlackTreeMap<K extends Comparable<K>, V> extends RedBlackTre
         tree.draw();
         System.out.print("\n\n\n");
 
-        tree.put(7,"a");
+        tree.put(5,"a");
         tree.draw();
         System.out.print("\n\n\n");
+
+        tree.put(4,"a");
+        tree.draw();
+        System.out.print("\n\n\n");
+
     }
 
 }
